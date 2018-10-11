@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+                android:background="#FFFAFA"
+    >
+
+
+
+    <TextView
+        android:id="@+id/tv_parent_m"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="08月"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="8dp"
+        android:textColor="#000"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/tv_parent_y"
+        android:layout_below="@id/tv_parent_m"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="2018年"/>
+
+    <TextView
+        android:id="@+id/tv_parent_mon"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textSize="16sp"
+        android:layout_marginRight="8dp"
+        android:textColor="#000"
+        android:text="20000"/>
+</RelativeLayout>
