@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+    <RelativeLayout
+        android:id="@+id/rl_card"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:background="@drawable/ic_launcher_background">
+
+        <ImageView
+            android:id="@+id/cv_bank"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_bankname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_toRightOf="@+id/cv_bank"
+            android:text="招商银行"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_namenum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+
+            android:text="张*明 8888"
+            />
+
+
+
+        <TextView
+            android:id="@+id/tv_surday"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:gravity="center_vertical"
+
+
+            android:text="4"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_datehint_title"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="天"
+
+            android:layout_toRightOf="@+id/tv_surday"
+            />
+
+        <TextView
+            android:id="@+id/tv_datehint"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="内还款"
+
+            android:layout_toRightOf="@+id/tv_datehint_title"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_surdate"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="08-24"
+
+            android:layout_toRightOf="@+id/tv_surday"
+            />
+
+        <TextView
+            android:id="@+id/tv_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+
+            android:text="9865.32"
+            />
+
+        <TextView
+            android:id="@+id/tv_hk"
+            android:layout_width="130dp"
+            android:layout_height="48dp"
+
+            android:text="还款"
+            android:gravity="center"
+
+            android:layout_alignParentRight="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_surlimit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="剩余额度："
+
+
+            android:layout_alignParentBottom="true"
+
+            />
+        <TextView
+            android:id="@+id/tv_surlimit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7896"
+            android:layout_toRightOf="@+id/tv_surlimit_title"
+
+            android:layout_alignParentBottom="true"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_mianxi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="免息期："
+
+            android:layout_alignParentBottom="true"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_mianxi_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="45"
+            android:layout_toRightOf="@+id/tv_mianxi"
+
+            android:layout_alignParentBottom="true"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="天"
+            android:layout_toRightOf="@+id/tv_mianxi_date"
+            android:layout_alignParentBottom="true"
+
+            />
+
+        <ImageView
+            android:id="@+id/iv_bank"
+            android:layout_width="232dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_default"
+            android:layout_width="126dp"
+            android:layout_height="116dp"
+
+            android:scaleType="centerCrop"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_addcard"
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:gravity="center"
+        android:text="+  添加信用卡"
+
+        android:visibility="gone" />
+
+</RelativeLayout>
