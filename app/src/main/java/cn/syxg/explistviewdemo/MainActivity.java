@@ -1,7 +1,10 @@
 package cn.syxg.explistviewdemo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
@@ -47,11 +50,18 @@ public class MainActivity extends AppCompatActivity {
             datas.put(str, temp);
         }
 
+        //datas.put("03月",new ArrayList<String>());
+
 
         myAdapter = new MyAdapter(this, parent, datas, listview);
         listview.setAdapter(myAdapter);
+
+        View view = LayoutInflater.from(this).inflate(R.layout.heard_item,null);
+
+        listview.addHeaderView(view);
+
         listview.setHeaderView(getLayoutInflater().inflate(
-                R.layout.indictor_layout, listview, false));
+                R.layout.parent_layout, listview, false));
 
         listview.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
@@ -66,5 +76,14 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < parent.size(); i++) {
             listview.expandGroup(i);
         }*/
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        Log.d("resultAAman",requestCode+">>"+resultCode);
+
+
     }
 }

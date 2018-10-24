@@ -28,6 +28,19 @@ public class CustomExpandListview extends ExpandableListView implements
         registerListener();
     }
 
+
+   /* @Override
+
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        int expandSpec = MeasureSpec.makeMeasureSpec(Integer.MAX_VALUE >> 2,
+                        MeasureSpec.AT_MOST);
+        super.onMeasure(widthMeasureSpec, expandSpec);
+    }*/
+
+
+
+
+
     /**
      * Adapter 接口 . 列表必须实现此接口 .
      */
@@ -174,12 +187,16 @@ public class CustomExpandListview extends ExpandableListView implements
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+         //heightMeasureSpec = MeasureSpec.makeMeasureSpec(Integer.MAX_VALUE >> 2,
+             //   MeasureSpec.AT_MOST);
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         if (mHeaderView != null) {
             measureChild(mHeaderView, widthMeasureSpec, heightMeasureSpec);
             mHeaderViewWidth = mHeaderView.getMeasuredWidth();
             mHeaderViewHeight = mHeaderView.getMeasuredHeight();
         }
+
+
     }
 
     private int mOldState = -1;
